@@ -30,7 +30,7 @@ main {
 h1 {
   color: var(--title-color);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 3px;
   padding: 15px 30px;
   text-transform: uppercase;
@@ -42,6 +42,18 @@ h1 {
   display: flex;
   margin: 20px 0 40px;
   padding-left: 10px;
+  position: relative;
+  left: -150px;
+}
+
+.sticker {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 50px;
+  border-bottom: 15px solid transparent;
+  border-left: 10px solid var(--body-background);
+  position: absolute;
+  bottom: 40px;
+  left: -25px;
 }
 
 .triangle-left {
@@ -70,6 +82,7 @@ h1 {
   border-radius: 5px;
   color: var(--title-color);
   cursor: pointer;
+  font-size: 10px;
   letter-spacing: 3px;
   margin: 10px;
   padding: 10px 15px;
@@ -87,6 +100,7 @@ h1 {
   justify-self: center;
   align-self: center;
   padding: 15px;
+  font-size: 13px;
 }
 
 .close-task-form-btn {
@@ -138,10 +152,11 @@ h1 {
 
 .task-form-label {
   margin-bottom: 5px;
-  font-weight: 500;
-  font-size: 1.2rem;
+  font-weight: 400;
+
   color: var(--body-background);
-  letter-spacing: 2px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 #title-input,
@@ -156,10 +171,9 @@ h1 {
 
 #confirm-close-dialog {
   border: none;
-  padding: 10px;
+  padding: 15px;
   margin: 10px auto;
   border-radius: 15px;
-  font-size: 1rem;
 }
 
 .confirm-close-dialog-btn-container {
@@ -172,6 +186,7 @@ h1 {
   text-align: center;
   letter-spacing: 1px;
   font-weight: 400;
+  margin-top: 10px;
 }
 
 #tasks-container {
@@ -205,7 +220,7 @@ footer {
   }
 
   .task-form-label {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   #title-input,
