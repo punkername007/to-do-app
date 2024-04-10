@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>To do List</title>
+  </head>
+  <body>
+    <main>
+      <div class="header-back">
+        <h1>to-do app</h1>
+        <div class="triangle-left"></div>
+      </div>
+      <div class="to-do-app">
+        <button class="btn large-btn" id="open-task-form-btn">
+          Add new task
+        </button>
+        <form class="task-form hidden" id="task-form">
+          <div class="task-form-header">
+            <button
+              class="close-task-form-btn"
+              id="close-task-form-btn"
+              type="button"
+              aria-label="close"
+            >
+              X
+            </button>
+          </div>
+          <div class="task-form-body">
+            <label class="task-form-label" for="title-input">Title</label>
+            <input
+              type="text"
+              id="title-input"
+              class="form-control"
+              value=""
+              required
+            />
+            <label class="task-form-label" for="date-input">Date</label>
+            <input type="date" class="form-control" id="date-input" value="" />
+            <label class="task-form-label" for="description-input"
+              >Description</label
+            >
+            <textarea
+              class="form-control"
+              id="description-input"
+              cols="30"
+              rows="5"
+            ></textarea>
+          </div>
+          <div class="task-form-footer">
+            <button
+              id="add-or-update-task-btn"
+              class="btn large-btn"
+              type="submit"
+            >
+              Add Task
+            </button>
+          </div>
+        </form>
+        <dialog id="confirm-close-dialog">
+          <form method="dialog">
+            <p class="discard-message-text">discard unsaved changes?</p>
+            <div class="confirm-close-dialog-btn-container">
+              <button id="cancel-btn" class="btn">cancel</button>
+              <button id="discard-btn" class="btn">discard</button>
+            </div>
+          </form>
+        </dialog>
+        <div id="tasks-container"></div>
+      </div>
+    </main>
+    <footer>
+      This app was coded by Selene Roa as part of a project for freeCodeCamp. It
+      is open sourced and hosted in Netlify.
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
