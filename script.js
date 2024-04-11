@@ -43,9 +43,9 @@ const updateTaskContainer = () => {
   tasksData.forEach(({ id, title, date, description }) => {
     tasksContainer.innerHTML += `
     <div class="task" id="${id}">
-        <p><strong>Title:</strong> ${title}</p>
-        <p><strong>Date:</strong> ${date}</p>
-        <p><strong>Description:</strong> ${description}</p>
+        <p><span class="task-label">Title:</span> ${title}</p>
+        <p><span class="task-label">Date:</span> ${date}</p>
+        <p><span class="task-label">Description:</span> ${description}</p>
         <button type="button" class="btn" onclick="editTask(this)">Edit</button>
         <button type="button" class="btn" onclick="deleteTask(this)">Delete</button>
     </div>
