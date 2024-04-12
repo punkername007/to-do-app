@@ -1,9 +1,11 @@
 :root {
   --body-background: #deecee;
   --title-color: #181d31;
-  --app-color: #f0e9d2;
-  --btn-color: #e6ddc4;
+  --second-title-color: #181d31bb;
+  --app-color: rgb(240, 233, 210);
+  --btn-color: #e9dbb5d5;
   --form-color: #678983;
+  --shadow: rgba(0, 0, 0, 0.2);
 }
 *,
 ::before,
@@ -40,32 +42,40 @@ h1 {
   background-color: var(--form-color);
   display: flex;
   margin: 20px 0 40px;
-  padding-left: 10px;
   position: relative;
-  left: -150px;
+  left: -15%;
 }
 
 .sticker {
-  border-bottom: 15px solid transparent;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-left: 10px solid var(--body-background);
-  bottom: 40px;
-  left: -25px;
+  border-bottom: 15px solid var(--title-color);
+  border-left: 5px solid transparent;
+  bottom: 43px;
   position: absolute;
+  right: 90px;
   width: 50px;
+}
+
+.stk1 {
+  background-color: transparent;
+  border-bottom: 11px solid rgba(240, 233, 210, 0.8);
+  border-left: 10px solid transparent;
+  bottom: 40px;
+  position: absolute;
+  right: 80px;
+  width: 40px;
 }
 
 .triangle-left {
   border-bottom: 25px solid transparent;
-  border-right: 50px solid var(--body-background);
+  border-left: 50px solid var(--body-background);
   border-top: 25px solid transparent;
 }
 
 .to-do-app {
   background-color: var(--app-color);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   border: 10px solid var(--btn-color);
   border-radius: 10px;
+  box-shadow: 5px 5px 15px var(--shadow);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -76,7 +86,6 @@ h1 {
 }
 
 .btn {
-  background-color: var(--btn-color);
   background-image: linear-gradient(var(--app-color) 10%, var(--btn-color));
   border: none;
   cursor: pointer;
@@ -95,8 +104,8 @@ h1 {
 
 .large-btn {
   align-self: center;
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.08);
-  color: #181d31bb;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.1);
+  color: var(--second-title-color);
   font-size: 13px;
   font-weight: 600;
   justify-self: center;
@@ -108,12 +117,12 @@ h1 {
 .close-task-form-btn {
   background: none;
   border: none;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
   color: var(--btn-color);
+  cursor: pointer;
+  font-size: 20px;
   font-weight: 700;
+  height: 50px;
+  width: 50px;
 }
 
 .task-form {
@@ -156,21 +165,22 @@ h1 {
 }
 
 .task-form-label {
-  margin-bottom: 8px;
-  font-weight: 400;
   color: var(--body-background);
+  font-weight: 400;
   letter-spacing: 4px;
+  margin-bottom: 8px;
   text-transform: uppercase;
 }
 
 #title-input,
 #date-input,
 #description-input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
   border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
   opacity: 0.9;
+  padding: 10px;
+  width: 100%;
 }
 
 #title-input:focus,
@@ -181,7 +191,7 @@ h1 {
 
 #confirm-close-dialog {
   border: none;
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.08);
+  box-shadow: 2px 3px 5px var(--shadow);
   padding: 15px;
   margin: 20px auto;
   border-radius: 15px;
@@ -195,11 +205,11 @@ h1 {
 }
 
 .discard-message-text {
-  color: #181d31bb;
-  text-align: center;
-  letter-spacing: 1.5px;
+  color: var(--second-title-color);
   font-weight: 500;
+  letter-spacing: 1.5px;
   margin-top: 10px;
+  text-align: center;
 }
 
 #tasks-container {
@@ -208,22 +218,24 @@ h1 {
 }
 
 .task {
+  background-color: #6789834c;
+  border-radius: 10px;
   margin: 10px 0;
   letter-spacing: 1.5px;
   padding: 20px 20px 10px;
-  background-color: #6789834c;
-  border-radius: 10px;
-  font-weight: 300;
-}
-
-.task-label {
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
 .task p {
+  font-weight: 300;
   margin-bottom: 6px;
+  text-transform: capitalize;
+}
+
+.task-label {
+  color: #181d31bb;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .hidden {
@@ -231,13 +243,13 @@ h1 {
 }
 
 footer {
-  margin: 40px auto 20px;
-  padding: 20px;
-  text-align: center;
   font-size: 11px;
   letter-spacing: 1.5px;
-  opacity: 0.6;
   line-height: 1.5;
+  margin: 40px auto 20px;
+  opacity: 0.6;
+  padding: 20px;
+  text-align: center;
 }
 
 footer a {
